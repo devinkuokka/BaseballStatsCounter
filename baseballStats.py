@@ -48,23 +48,11 @@ for x in parse:
         
 sortedAvgs = sorted(playerObj, key=lambda x: x.getBattingAverage(),reverse = True)
 
-# prints the batting average in sorted order, and with 3 places after the decimal
-rtnPattern1 = "0.\d{3}" #if there are 3 digits
-rtnPattern2 = "0.\d{2}" #if there are 2 digits
+# prints name: batting avg in decending order 
 for a in sortedAvgs:
 	for p in playerObj:
 		if p.getName()==a.getName():
-			avg = a.getBattingAverage()
-			name = a.getName()
-			if re.match(rtnPattern1, str(avg)):
-				rtn = name+": "+str(avg)
-				print rtn
-			elif re.match(rtnPattern2, str(avg)):
-				rtn = name+": "+str(avg)+"0" #adds a zero if only rounds to 2 numbers
-				print rtn
-			else:
-				rtn = name+": "+str(avg)+"00" #adds a zero if rounds to 0 or only 1 number
-				print rtn
+			print a.getName()+": "+a.toString()
 
 
 
