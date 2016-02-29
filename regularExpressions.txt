@@ -1,0 +1,5 @@
+1. \bhello world\b
+
+2. [aeiou]{3}
+
+3. \b[A-Z]+\d{3,4}\b
