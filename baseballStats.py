@@ -13,7 +13,7 @@ if not os.path.exists(filename):
 infile = open(filename)
 data = infile.read()
 
-#\sand\s(?P<runs>\d+)\sruns if need runs
+# "\sand\s(?P<runs>\d+)\sruns" could include in parse if needed runs, but unneeded for calculations
 #Regex that looks for players name, at bats, and hits
 parse = re.findall("(?P<name>\w+\s\w+)\sbatted\s(?P<atBats>\d+)\stimes\swith\s(?P<hits>\d+)\shits", data)
 
